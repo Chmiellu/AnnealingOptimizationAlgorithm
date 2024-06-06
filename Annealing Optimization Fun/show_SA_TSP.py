@@ -81,7 +81,7 @@ def chmiel_swap(tour):
     return new_tour
 
 
-def simulated_annealing(coords, initial_temperature=100, cooling=0.9, num_epochs=100, iterations_per_epoch=100):
+def simulated_annealing(coords, initial_temperature=100, cooling=0.9, num_epochs=300, iterations_per_epoch=300):
     dist_matrix = calculate_distance_matrix(coords)
     num_cities = len(coords)
 
@@ -155,5 +155,5 @@ def run_simulation(filepath):
     print(f"Difference from Optimal: {diff}")
 
 
-tsp_filepath = 'TSP/pr1002.tsp'
+tsp_filepath = 'TSP/lin105.tsp'
 run_simulation(tsp_filepath)
