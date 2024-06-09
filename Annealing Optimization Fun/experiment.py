@@ -82,7 +82,7 @@ def chmiel_swap(tour):
     return new_tour
 
 
-def simulated_annealing(coords, initial_temperature=100, cooling=0.95, num_epochs=300, iterations_per_epoch=300):
+def simulated_annealing(coords, initial_temperature=100, cooling=0.95, num_epochs=200, iterations_per_epoch=300):
     dist_matrix = calculate_distance_matrix(coords)
     num_cities = len(coords)
 
@@ -144,7 +144,7 @@ def plot_tour(ax, coords, tour, title='TSP Tour'):
 def plot_fitness(record_best_fitness, best_fitness, tsp_name):
     plt.figure()
     plt.plot(record_best_fitness)
-    plt.title('Best Fitness Over Time')
+    plt.title('Fitness changes over iterations')
     plt.xlabel('Iteration')
     plt.ylabel('Total Distance')
 
@@ -164,7 +164,7 @@ def plot_interactive(coords, record_solutions):
 
     def update(val):
         epoch = int(slider.val)
-        plot_tour(ax, coords, record_solutions[epoch], title=f'TSP Tour at Epoch {epoch}')
+        plot_tour(ax, coords, record_solutions[epoch], title=f'TSP Tour at epoch {epoch}')
         fig.canvas.draw_idle()
 
     slider.on_changed(update)
