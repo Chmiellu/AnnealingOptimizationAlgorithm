@@ -81,7 +81,7 @@ def chmiel_swap(tour):
     return new_tour
 
 
-def simulated_annealing(coords, initial_temperature=100, cooling=0.9, num_epochs=300, iterations_per_epoch=300):
+def simulated_annealing(coords, initial_temperature=100, cooling=0.95, num_epochs=300, iterations_per_epoch=300):
     dist_matrix = calculate_distance_matrix(coords)
     num_cities = len(coords)
 

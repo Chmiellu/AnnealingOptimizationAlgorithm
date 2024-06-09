@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Annealing Optimization Fun.iml" filepath="$PROJECT_DIR$/.idea/Annealing Optimization Fun.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/AnnealingOptimizationFun.iml" filepath="$PROJECT_DIR$/.idea/AnnealingOptimizationFun.iml" />
     </modules>
   </component>
 </project>
