@@ -82,7 +82,7 @@ def chmiel_swap(tour):
     return new_tour
 
 
-def simulated_annealing(coords, initial_temperature=100, cooling=0.95, num_epochs=200, iterations_per_epoch=300):
+def simulated_annealing(coords, initial_temperature=100, cooling=0.95, num_epochs=200, iterations_per_epoch=100):
     dist_matrix = calculate_distance_matrix(coords)
     num_cities = len(coords)
 
@@ -103,6 +103,7 @@ def simulated_annealing(coords, initial_temperature=100, cooling=0.95, num_epoch
             if new_fitness < current_fitness or random.random() < math.exp(
                     (current_fitness - new_fitness) / current_temperature):
                 current_solution = new_solution
+                best_fitness = new_fitness
                 if new_fitness < best_fitness:
                     best_solution = new_solution
                     best_fitness = new_fitness
