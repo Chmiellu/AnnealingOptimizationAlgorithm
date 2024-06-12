@@ -82,7 +82,7 @@ def chmiel_swap(tour):
     return new_tour
 
 
-def simulated_annealing(coords, initial_temperature=100, cooling=0.95, num_epochs=200, iterations_per_epoch=100):
+def simulated_annealing(coords, initial_temperature=100, cooling=0.95, num_epochs=200, iterations_per_epoch=300):
     dist_matrix = calculate_distance_matrix(coords)
     num_cities = len(coords)
 
@@ -120,7 +120,8 @@ def get_diff_result(problem, total_distance):
         "tsp225.tsp": 3919,
         "pr1002.tsp": 259045,
         "pr2392.tsp": 378032,
-        "rl5934.tsp": 556045
+        "rl5934.tsp": 556045,
+        "berlin52.tsp": 7542
     }
 
     if problem in optimal_distances:
